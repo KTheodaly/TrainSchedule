@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Train Schedule</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: powderblue">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/train.jpg" width="250" height="150" class="block align-top" alt="">
+            <h1> Toot toot! All Aboard!</h1>
+        </a>
+    </nav>
+    <br> <br>
+
+    <div id="sched">
+        <h2>Current Train Schedule</h2>
+        <div>
+            <table id="trainSchedule">
+                <tr>
+                    <th>Train Name<br></th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </tr>
+            </table>
+        </div>
+        <br><br>
+        <div id="add">
+            <h2> Add a Train</h2>
+            <form>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="trainName">Train Name</label></div>
+                        <div class="col-lg-6">
+                            <input type="text" id="trainName"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="destination">Destination</label></div>
+                        <div class="col-lg-6">
+                            <input type="text" id="destination"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="time">First Train Time (HH:mm - military time)</label></div>
+                        <div class="col-lg-6">
+                            <input type="text" id="time"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="frequency">Frequency (min)</label></div>
+                        <div class="col-lg-6">
+                            <input type="text" id="frequency"></div>
+                    </div>
+
+
+                    <button type="success" id="submit">Submit</button>
+
+                </div>
+            </form>
+        </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="app.js"></script>
+
+</html>

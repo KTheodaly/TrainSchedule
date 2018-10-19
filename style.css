@@ -1,0 +1,35 @@
+body {
+    font-family: 'Acme', sans-serif;
+    font-weight: 700;
+}
+th {
+    padding: 50;
+    margin: 50;
+    border: 50;
+}
+
+#sched{
+    width: 100%;
+    background-color: powderblue;
+    max-width: 960px;
+    margin: auto;
+    clear: both;
+}
+
+#add {
+    width: 100%;
+    background-color: powderblue;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+  }
+  
+  
+  #logo {
+    float: left;
+    width: 250px;
+    height: 150px;
+  }
+  
+  
+  
