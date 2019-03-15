@@ -1,5 +1,5 @@
 var config = {
-    apiKey: "AIzaSyA1aIjY6vE9UOIOtMx31nIq_8b-Vu5zTdw",
+    apiKey: "AIzaSyA1aIjY6vE9UOIOtMx31nIq_8b-Vu5zdivw",
     authDomain: "trainschedule-ed82c.firebaseapp.com",
     databaseURL: "https://trainschedule-ed82c.firebaseio.com",
     projectId: "trainschedule-ed82c",
@@ -20,7 +20,7 @@ var database = firebase.database(),
     minutesAway = minutesAway;
 
 $("#submit").on("click", function (event) {
-    event.preventDefault();
+    event.prevendivefault();
     computeValues();
 });
 
@@ -104,13 +104,16 @@ function computeValues() {
 //Append values to be displayed on my table
 database.ref().on("child_added", function (childSnapshot) {
 
-    $("#trainSchedule").append("<tr>" +
-        "<td>" + childSnapshot.val().trainName + "</td>" +
-        "<td>" + childSnapshot.val().destination + "</td>" +
-        "<td>" + childSnapshot.val().frequency + "</td>" +
-        "<td>" + childSnapshot.val().nextTrain + "</td>" +
-        "<td>" + childSnapshot.val().minutesAway + "</td>" +
-        "</tr>"
+    $("#trainSchedule").append('<div class="container">' + 
+        '<div class="row">' + 
+        '<div class="col-lg-1"></div>' +
+        '<div class="col-lg-2"><div class="grid">' + childSnapshot.val().trainName + '</div>' + '</div>' +
+        '<div class="col-lg-2"><div class="grid">' + childSnapshot.val().destination + '</div>' + '</div>' +
+        '<div class="col-lg-2"><div class="grid">' + childSnapshot.val().frequency + '</div>' + '</div>' +
+        '<div class="col-lg-2"><div class="grid">' + childSnapshot.val().nextTrain + '</div>' + '</div>' +
+        '<div class="col-lg-2"><div class="grid">' + childSnapshot.val().minutesAway + '</div>' + '</div>' +
+        '<div class="col-lg-1"></div>' +
+        '</div></div>' 
     );
 
 });
