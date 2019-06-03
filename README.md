@@ -10,7 +10,7 @@
 
 ## Who will use this repo?
 
-* This is for coursework utilizing firbase, but is open to anyone who wants to explore the code or play with it for fun.
+* This is for gaining familiarity utilizing firebase, but is open to anyone who wants to explore the code or play with it for fun.
 
 ## What is the goal of the project?
 
